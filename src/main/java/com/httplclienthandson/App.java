@@ -19,12 +19,12 @@ public class App {
 
 
 
-        /*
+
         HttpClient httpClient = HttpClient.newHttpClient();
         // HttpClient httpClient1 = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(5)).followRedirects(HttpClient.Redirect.NORMAL).build();
         HttpRequest httpRequest1 = HttpRequest.newBuilder(URI.create("http://httpstat.us/500?sleep=10000")).GET().build();
         HttpRequest httpRequest2 = HttpRequest.newBuilder(URI.create("http://httpstat.us/500?sleep=20000")).GET().build();
-        */
+        
 
         /* A simple Sync call Blocking code Will take 30 sec to complete
         HttpResponse<String> httpResponse1 = httpClient.send(httpRequest1, HttpResponse.BodyHandlers.ofString());
