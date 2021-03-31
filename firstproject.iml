@@ -39,5 +39,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.4" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.16" level="project" />
+    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.6.1" level="project" />
   </component>
 </module>

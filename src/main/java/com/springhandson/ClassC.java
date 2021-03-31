@@ -1,6 +1,5 @@
 package com.springhandson;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class ClassC {
 

@@ -1,6 +1,4 @@
 package com.springhandson;
-import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 public class ClassA {
@@ -43,7 +41,5 @@ public class ClassA {
     {
         return this.c.size();
     }
-
-
 
 }

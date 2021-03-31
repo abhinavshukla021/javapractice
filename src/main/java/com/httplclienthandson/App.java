@@ -37,20 +37,20 @@ public class App {
         // HttpResponse<Void> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.discarding());
         */
 
-        /*
+
         CompletableFuture<HttpResponse<String>> completableFuture1 = httpClient.sendAsync(httpRequest1, HttpResponse.BodyHandlers.ofString());
         System.out.println("Sync call 1 is running");
         CompletableFuture<HttpResponse<Void>> completableFuture2 = httpClient.sendAsync(httpRequest2, HttpResponse.BodyHandlers.discarding());
         System.out.println("Sync call 2 is running");
 
         // A simple async call Will take 20 sec to complete
-        // System.out.println(completableFuture1.get());
         // System.out.println(completableFuture2.get());
+        // System.out.println(completableFuture1.get());
 
-        System.out.println(completableFuture1.thenApply(HttpResponse::body).get());
-        System.out.println(completableFuture2.thenApply(HttpResponse::headers).get());
+        // System.out.println(completableFuture1.thenApply(HttpResponse::body).get());
+        // System.out.println(completableFuture2.thenApply(HttpResponse::headers).get());
 
-        */
+
 
         /* Using Cookies
 

@@ -37,7 +37,7 @@ public class BeanConfig {
     public ClassB getobjB ()
     {
         return new ClassB(2,"Shukla", null);
-    }
+    }   // null is for autowiring.
 
     @Bean
     @Scope("prototype")
