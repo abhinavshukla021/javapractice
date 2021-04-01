@@ -26,6 +26,7 @@ public class App {
 
             // create a connection to the database
             connection = DriverManager.getConnection(url, user, password);
+            // connection.setAutocommit(false);
 
             // Creating a Statement Object for querying
             Statement statement = connection.createStatement();
@@ -69,6 +70,17 @@ public class App {
             int rowaffected1 = preparedStatement1.executeUpdate();
             System.out.println("Inserted Row Count " + rowaffected1);
 
+            // Calling Stored Procedures
+            CallableStatement callableStatement = connection.prepareCall("{call get_candidate_skill(?)}");
+            callableStatement.setInt(1,100);
+            ResultSet resultSet1 = callableStatement.executeQuery();
+
+            while (resultSet1.next()) {
+                System.out.println(
+                        resultSet1.getString("first_name") + " "
+                                + resultSet1.getString("last_name"));
+            }
+
             try{
                 resultSet.close();
                 statement.close();
@@ -78,9 +90,11 @@ public class App {
             {
                 System.out.println("Error in closing ResultSet and Statement "+ e.toString());
             }
+            // connection.commit();
 
         } catch(IOException | SQLException e) {
-            System.out.println("Error in connecting with Database "+ e.toString());
+            // connection.rollback();
+            System.out.println("Error in Transaction with Database "+ e.toString());
         }finally {
             try {
                 if(connection != null)
